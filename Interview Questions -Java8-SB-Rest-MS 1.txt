@@ -1,0 +1,361 @@
+Prerequisite for Client Interview(Any): (Very Important ones)
+---------------------------------------
+pre requites for the interview 
+
+•	They should attend the interview via MicroSoft teams 
+•	Video Camera must be on 
+•	Screen sharing should be possible 
+•	Java IDE should be installed (In case of personal laptop then Eclipse, STS, IntelliJ, Netbeans, etc.,)
+•	Candidate is to be prepared to write coding test along with Junit
+
+IDE Installation in Capgemini Laptop:
+-------------------------------------
+Step-1: go to Ask Adam in Teams
+Step-2: type "Request Software"
+Step-3: click "Install Freeware/Open-Source Software"
+Step-4: It will give you list of steps to be followed, do all these steps
+Step-5: After completing Step-4 successfully you can find the list of open source softwares among that scroll and click "IntelliJ Community Edition", it will get installed
+
+Note: If you don't have IDE in your machine or if it gets stuck then Google for "Java online compiler" and use it for execution.
+
+Practical Evaluation:
+---------------------
+1. how you will implement the log files? what are environments you will implement logs? what are the different levels of logs? Error, Warn, Info, Debug, (Debug-Low, Debug-Medium, Debug-High), Severe, Inherit
+2. what you will do if the log file size reached the maximum size?
+3. how you will implement springboot profiling? Prod, PreProd, UAT, QA, Dev, SIT(System Integration testing)
+4. when and which situation we do junit and how we will do run and check junit?
+5. what are the annotations available for JUnit?
+6. how you will fix the performance issue in the application? eg., JMeter
+7. how you will connect with databases using springboot?
+application.properties, cmdline properties, application.yml, externalized properties
+8. how you will connect with databases using hibernate?
+9. what are the implicit objects in jsp?
+10. how many environments you totally worked with? what are they?
+11. what are steps involved in creating REST API? how you will test the REST API?
+12. how to check the log files when an issue occurs?
+13. what are java design patterns you worked / familiar with?
+14) WAP to find factorial of a number N using recursion.
+Input - 5
+Output - 120
+15) WAP to find second largest element from a given list of numbers.
+Input - 97 83 85 70 78 82
+Output – 85
+16) Fibonacci series using recursion.
+17) Prime or not using lambda expression or Java7
+18)	Find 2nd or 3rd largest number from 5
+19)	Junit test case from the code writer
+20)	5 individual numbers to be captured and print, if found duplicate remove or print the same
+21)	Code Palindrome or Fibonacci series
+22)	Least occurrence alphabet to be found with count in the given string
+
+Core Java:
+----------
+1	     What are the newly added features in Java 7?
+String in switch statement, Binary Literals, try-with-resources, Catching Multiple Exceptions by single catch,
+Underscores in Numeric Literals, Type Inference, JDBC, JDBC Template, Concurrency
+2.	     what is this keyword in java?
+3.	     what is super keyword in java?
+4.	     Explain public static void main(String[] args)?
+4a.	     Difference between method and constructor in java?
+5.	     what is overloading in java give example?
+6.	     what is overriding in java give example?
+7.	     difference between static and dynamic binding in java?
+8.	     why static binding is called early binding and dynamic binding is called late binding?
+9.	     what are different access specifiers we have in java?
+10.	     Explain OOPS concept in java?
+11	     why we need finally block in java?(3)
+12           =>What is the significance of hashcode method in java
+13            =>What are methods of object class in java(3)
+14            What is the contract between hashcode and equals method in java
+15            =>What is difference between String literals and String object(3)(it get creates in string constant pool using intern())
+we can use intern() to make String object eligible for SCP => String str= new String("hi").intern();
+16            How to declare multiple exceptions in single catch block and what should be the order of those exceptions(3)
+17            =>What is difference between String, String Builder and String Buffer(3)
+18            =>What is difference between abstract class and interface(3)
+19	     =>What are the collection interfaces we have?(3)
+20.		what are the collection classes we have?
+20           =>Which collection should be used for fast retrieval of elements in non multi threaded environment
+21           =>How to make any data member of a class not eligible for serialization?
+22           =>What will happen if we try to get key from hash map which is not present in the map
+23           What are fail fast and fail safe collections(6)
+24           =>Serialization and Synchronization(3)
+25           =>Comparable and Comparator(3,6)
+26           =>what is Immutable Class?(3)
+27.          =>Why String is immutable? (3)
+28           Stack and Heap Memory(3)
+29.	     =>what is final, finally and finalize in java?(3)
+30.	     what is the internal working of hashmap?(3)
+How HashMap works internally || Popular java interview question on collection (HashMap)
+https://www.youtube.com/watch?v=CojCE-ojdGY
+31.		difference between XML and JSON
+32.		how you will read and write XML in java?
+33.		how you will read and write JSON in java?
+34.		how you will update or delete XML data in java?
+35.		how you will update or delete JSON data in java?
+36.		explain ternary operator in java with example?
+
+Core Java Practical Test:
+-------------------------
+Type the below code in MS Teams chat and ask candidate about the output and check:
+what is the output of the below one?
+public class SimpleClass {
+	public void method(String str){
+		System.out.println("String method " + str);
+	}
+	public void method(Object object) {
+		System.out.println("Object method " + object);
+	}
+	public static void main(String[] args) {
+		SimpleClass instance = new SimpleClass();
+		instance.method("Hello");
+		instance.method(new String("World"));
+		String str = new String("Mango");
+		instance.method((Object)str);
+		instance.method(null);
+	}
+}
+output:
+Object method Hello 
+String method World 
+Object method Mango 
+Object method null 
+
+Java-8:
+-------
+=>1. What are the newly added features in Java 8?
+Java 8 Date/Time API, Lambda Expressions, Method References, Functional Interfaces, Stream, Base64 Encode Decode, Default Methods,
+forEach method, Collectors, StringJoiner, Optional class, Nashorn JavaScript, Parallel Array Sorting, Type Inference,
+Method Parameter Reflection, Type annotations and repeating annotations, Java JDBC Improvements, Java IO Improvement,
+Java Concurrency Improvement
+
+=>2. In which programming paradigm Java 8 falls?
+Object-oriented programming language.
+Functional programming language.
+Procedural programming language.
+Logic programming language
+
+3. What are the significant advantages of Java 8? 
+Compact, readable, and reusable code.
+Less boilerplate code.
+Parallel operations and execution.
+Can be ported across operating systems.
+High stability.
+Stable environment.
+Adequate support
+
+4. What is MetaSpace? How does it differ from PermGen?
+PremGen: MetaData information of classes was stored in PremGen (Permanent-Generation) memory type before Java 8. PremGen is fixed in size and cannot be dynamically resized. It was a contiguous Java Heap Memory.
+
+MetaSpace: Java 8 stores the MetaData of classes in native memory called 'MetaSpace'. It is not a contiguous Heap Memory and hence can be grown dynamically which helps to overcome the size constraints. This improves the garbage collection, auto-tuning, and de-allocation of metadata
+
+=>5. What is functional interface or SAM interface?
+6. Can a functional interface extend/inherit another interface?
+=>7. What is default method, and why is it required?
+=>8. What are static methods in Interfaces?
+=>9. What are some standard Java pre-defined functional interfaces? Runnable, Callable, Comparator, Comparable
+
+10. What are the various categories of pre-defined functional interfaces?
+Function: To transform arguments in returnable value.
+Predicate: To perform a test and return a Boolean value.
+Consumer: Accept arguments but do not return any values.
+Supplier: Do not accept any arguments but return a value.
+Operator: Perform a reduction type operation that accepts the same input types
+
+11. What is the lambda expression in Java and How does a lambda expression relate to a functional interface?
+=>12. What is the basic structure/syntax of a lambda expression?
+
+13. What are the features of  lambda expression?
+Lambda expressions can be passed as a parameter to another method. 
+Lambda expressions can be standalone without belonging to any class.
+
+14. What are the types and common ways to use lambda expressions? =>doubt
+15. What is a type interface?
+=>16. In Java 8, what is Method Reference?
+17. What does the String::ValueOf expression mean?
+It is a static method reference to the method Valueof() of class String. It will return the string representation of the argument passed
+=>18. What is an Optional class?
+19. What are the advantages of using Optional class?
+19a. what is difference between map() and flatMap()?
+20. What are Java 8 streams?
+=>21. What are the main components of a Stream?
+Source, intermediate operation, terminal operation
+
+22. What are the sources of data objects a Stream can process?
+A Stream can process the following data:
+1. A collection of an Array.
+b. An I/O channel or an input device.
+c. A reactive source (e.g., comments in social media or tweets/re-tweets) 
+d. A stream generator function or a static factory
+
+23. What are Intermediate and Terminal operations?
+24. What are the most commonly used Intermediate operations?
+25. What is the stateful intermediate operation? Give some examples of stateful intermediate operations
+For Eg: sorted() , distinct() , limit() , skip() etc.
+26. What is the most common type of Terminal operations?
+collect() - Collects single result from all elements of the stream sequence.
+reduce() - Produces a single result from all elements of the stream sequence
+count() - Returns the number of elements on the stream.
+min() - Returns the min element from the stream.
+max() - Returns the max element from the stream.
+Search/Query operations
+anyMatch() , noneMatch() , allMatch() , ... - Short-circuiting operations.
+Takes a Predicate as input for the match condition.
+Stream processing will be stopped, as and when the result can be determined.
+Iterative operations
+forEach() - Useful to do something with each of the Stream elements. It accepts a consumer.
+forEachOrdered() - It is helpful to maintain order in parallel streams
+=>27. What is the difference between findFirst() and findAny()?
+findFirst() - Returns the first element in the Stream
+findAny() - Return any element from the Stream
+=>28. How are Collection different from Stream?
+
+29. What is the feature of the new Date and Time API in Java 8?
+Immutable classes and Thread-safe 
+Timezone support
+Fluent methods for object creation and arithmetic
+Addresses I18N issue for earlier APIs
+Influenced by popular joda-time package
+All packages are based on the ISO-8601 calendar system
+
+30. What are the important packages for the new Date and Time API?
+31. what is String joiner in java 8?
+32. what is wrong in using hashmap in multi threading? what is the solution for it?
+33. difference between making hashmap with synchronized and using concuurent hashmap?
+34. explain stack memory?
+35. difference between hashset and tree set?
+36. how HashMap is implemented in java 8?
+
+Core Java 8 Practical Test:
+--------------------------
+1. Lambda expression basic syntax or structure
+Answer: ()->{}
+Q1. left hand side of the arrow operator we have paranthesis, is that is mandatory or not? which case it is mandatory and which case it is not mandatory?
+Q2. right hand side of the arrow operator we have curly bracket, is that is mandatory or not? which case it is mandatory and which case it is not mandatory?
+
+2. Functional Interface:
+Q1. what is the below code means?
+interface Arithmetic {
+	int operation(int a, int b);
+}
+Answer: Functional interface
+
+Q2. Implement the above functional interface using lambda expression with reference as Arithmetic
+Answer: Arithmetic addition = (int a, int b) -> (a + b);
+
+Q3. Invoke it by passing 10,20
+Answer: addition.operation(10,20);
+
+3. Stream API:
+Q1. Integer[] nums = {1,2,3,4,5,6};
+Square all the 6 numbers and then get greater than 20 and count how many are there and sysout it. Using single Stream API statement in one line.
+Answer: long count = Arrays.stream(nums).map(n -> n*n).filter(n -> n > 20).count();
+System.out.println("count "+count);
+
+4. Optional Class:
+Q1.  String[] str = new String[10];  
+consider str[5] and check whether it is not null then convert that string into lowercase and sysout it, if it is null then give appropriate message, everything using Optional class
+Answer: Optional<String> checkNull = Optional.ofNullable(str[5]);  
+        if(checkNull.isPresent()){  // check for value is present or not  
+            String lowercaseString = str[5].toLowerCase();  
+            System.out.print(lowercaseString);  
+        }else{
+            System.out.println("string value is not present");  
+    	  } 
+
+5. StringJoiner:
+Q1. create one StringJoiner and the output
+
+ 
+Design pattern: Singleton, Factory, Builder, Strategy, Adaptor, Abstract, Command, Facade, Decorator, Iterator, Observer
+--------------
+ 
+Springboot question:
+--------------------
+1. =>What Is Spring Boot and What Are Its Main Features?
+2. =>What are the Differences Between Spring and Spring Boot?
+3. =>How Can We Set Up a Spring Boot Application from scratch?
+3a. how to connect springboot with database using JDBC?
+4. =>What is Spring Initializr?
+5. =>What Spring Boot Starters are available? 
+spring-boot-starter-web, web-services, test, jdbc, hateoas, security, data-jpa, dev-tool,cache, data-rest, spring-boot-starter-actuator
+6. =>what is @SpringBootApplication annotation means?
+@EnableAutoConfiguration, @ComponentScan and @Configuration
+6a. what is @SpringBootApplication annotation indicates?
+7. =>Difference between @Controller and @RestController?
+@Controller response as ModelAndView and explicitly mention @ResponseBody, @RestController response will be JSON, 
+no need to specify @ResponseBody
+8. =>Difference between @GetMapping and @RequestMapping?
+9. =>How to Disable a Specific Auto-Configuration? using exclude
+10. How to Register a Custom Auto-Configuration?
+10. how to handle exception in Spring boot application? @ControllerAdvice, @ExceptionalHandling
+11. =>what are the Stereotype annotations available? @Component, @Service, @Repository, @Controller
+12. what is the repository you used in your Springboot project?
+12a. what is the diff bet CRUDRepository and JPARepository?
+13. How to Tell an Auto-Configuration to Back Away When a Bean Exists?
+14. How to Deploy Spring Boot Web Applications as Jar and War Files?
+15. How to Use Spring Boot for Command-Line Applications?
+16. What Are Possible Sources of External Configuration?
+17. What Does It Mean That Spring Boot Supports Relaxed Binding?
+18. What Is Spring Boot DevTools Used For?(it will automatically pick the changes we have done else we have to restart the server to make the changes)
+19. How to Write Integration Tests?
+20. What Is Spring Boot Actuator Used For?
+21. Which Is Better to Configure a Spring Boot Project — Properties or YAML?application.properties is default one taken by SB
+22. What Basic Annotations Does Spring Boot Offer?
+22a. what is the default port in spring boot?
+23. How to Change the Default Port in Spring Boot? server.port=8082
+24. Which Embedded Servers Does Spring Boot Support, which is default server and How to Change the Default one?
+Tomcat, Jetty, Undertow
+25. Why Do We Need Spring Profiles?
+
+REST API Basic Interview Questions:
+-----------------------------------
+1. What do you understand by RESTful Web Services?
+1a. what are the components of http request and http response?
+2. What is a REST Resource?
+3. What is URI?
+4. What are the features of RESTful Web Services? to make CRUD operation safer between application n DB and also exposing and consuming JSON / XML data
+5. What is the concept of statelessness in REST?
+6. What do you understand by JAX-RS
+7. What are HTTP Status codes available?
+8. What are the HTTP Methods available?
+9. Can you tell the disadvantages of RESTful web services?
+10. Define Messaging in terms of RESTful web services.
+11. Differentiate between SOAP and REST?
+12. While creating URI for web services, what are the best practices that needs to be followed?
+13. What are the best practices to develop RESTful web services?
+14. What are Idempotent methods? How is it relevant in RESTful web services domain?
+15. What are the differences between REST and AJAX?
+16. Can you tell what constitutes the core components of HTTP Request?
+17. What constitutes the core components of HTTP Response?
+18. Define Addressing in terms of RESTful Web Services.
+19. What are the differences between PUT and POST in REST?
+20. What makes REST services to be easily scalable?
+21. Based on what factors, you can decide which type of web services you need to use - SOAP or REST?
+22. We can develop webservices using web sockets as well as REST. What are the differences between these two?
+23. Can we implement transport layer security (TLS) in REST?
+24. Should we make the resources thread safe explicitly if they are made to share across multiple clients?
+25. What is Payload in terms of RESTful web services?
+26. Is it possible to send payload in the GET and DELETE methods?
+27. How can you test RESTful Web Services?
+28. What is the maximum payload size that can be sent in POST methods?
+29. How does HTTP Basic Authentication work?
+30. What is the difference between idempotent and safe HTTP methods?
+
+
+
+Microservices questions:
+------------------------
+1.	What is the need for Cloud?
+2.	What is Spring Cloud?
+3.	What are the advantages of using cloud?
+4.	What design patterns are used in Microservices? (circuit breaker, chain to chain responsible, APIGateway)
+5.	What is circuit breaker in Microservices?
+6.	What is broker less architecture in MicroService?
+7.	What is Netflix Feign?
+8.	What are Netflix feign advantages? (to communicate between microservices, also load balancing)
+9.	What is Eureka in Spring Cloud?(Service registry and service discovery)
+10.	What is Hystrix in Microservices? (it is a circuit breaker implementation)
+11.	What is ZUUL?
+event driven dp?domain driven dp?circuit breaker, aggregator, APIGateway, Feign Client, Decomposition
+12. what is APIGateway and what are its advantages?
+13. how to authenticate and authorize in microservices applications?

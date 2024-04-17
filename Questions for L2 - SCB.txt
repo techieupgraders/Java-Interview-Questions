@@ -1,0 +1,439 @@
+------------------------------------------
+1. what is lambda expression?
+A lambda expression can be used to implement a functional interface without creating a class or an anonymous class. Lambda expressions can be used only with interfaces that declare a single method.
+
+2. Benefits of lambda expressions?
+Concise syntax
+Method references and constructor references
+Reduced runtime overhead compared to anonymous classes
+
+3. What is MetaSpace? How does it differ from PermGen?
+4. what is method reference? diff types of method reference?
+5. what is the similarity between java method and lambda expression?
+6. what is the difference between java method and lambda expression?
+7. can we have default and static method in normal interfaces?
+8. why we need default method and advantage of default method?
+9. why we need static method and advantage of static method?
+10. can we pass lambda expression as a parameter to any other method? example?
+11. what is a functional interface?
+12. What are some standard Java pre-defined functional interfaces? Runnable, Callable, Comparator, Comparable
+13. whether a Functional interface can extend another interface? if so what is the condition?
+14. Can a Functional interface have any number of Object class methods in it? example?
+15. whether the following is a valid functional interface?
+@FunctionalInterface  
+interface sayable{  
+    void say(String msg);
+    int hashCode(); 
+    String toString();
+    boolean equals(Object obj);  
+}  
+
+16. Give the below declaration and ask them to implement it using lambda expression: give them Step-1 alone and ask them to implement FI using lambda expression and ask the to invoke it by passing 10, 20.
+//only 1 minute time
+// Implement this using Arithmetic as reference type and addition as reference variable
+//Step-1: Declaration of Custom Functional Interface
+@FunctionalInterface
+interface Arithmetic {
+	int operation(int a, int b);
+} 
+
+//Step-2: Functional Interface Implementation or definition
+Arithmetic addition = (int a, int b) -> (a + b);
+
+//Step-3: Functional Interface Invocation
+addition.operation(10,20);
+
+
+Ask candidate about Types of Method References:
+1. Reference to a static method.
+2. Reference to an instance method.
+3. Reference to a constructor.
+
+Stream:
+-------
+1. what is stream API?
+
+2. what are the main components of stream API? source, intermediate and terminal operations
+3. give the below scenario and below 10 points to implement them by sharing their screen and ask them to type in a notepad(only) in front of you
+Integer[] nums = {6,2,4,3,5,1};
+1. Sort it
+2. Square all the numbers
+3. find greater than 20
+4. find how many greater than 20 is there
+5. print the count
+6. condition is you have to implement point 1 to 4 using single stream api statement
+7. second statement is for sysout
+8. totally 2 statements are allowed
+9. only 2 minutes allowed totally for solving this
+10. you should not use IDE/Notepad++, you should use Notepad only
+
+Solution:
+long count = Arrays.stream(nums).sorted().map(n -> n*n).filter(n -> n > 20).count();
+System.out.print(count);
+
+
+Optional class example
+
+ String[] str = new String[10]; // only 2 minutes time
+        Optional<String> checkValue = Optional.ofNullable(str[5]);  
+        if(checkValue.isPresent()){  
+            System.out.print(str[5].toLowerCase());  
+        }else{
+            System.out.println("string value is not present");  
+    	  } 
+
+Optional<String>  opt=Optional.ofNullable(str).filter(s->s.toLowerCase());System.out.print("value is"+opt.toString());
+Optional.ofNullable(str[5]).ifPresent(System.out::Println).orElse(System.out.println("Given string is null"));
+
+
+String Joiner:
+--------------
+// only 1 minute time
+StringJoiner joinNames = new StringJoiner(",", "]", "["); 
+joinNames.add("Rahul");  
+joinNames.add("Raju");  
+joinNames.add("Peter");  
+joinNames.add("Raheem");                   
+System.out.println(joinNames); 
+
+output: ]Rahul,Raju,Peter,Raheem[
+
+17. Collection interface we have? collection classes?
+18. how to remove duplicates from the list? what are all the diff ways to achieve it?
+19. what is  String literal and string object?
+20. diff bet string, stringBuilder and stringBuffer?
+
+Core Java 8 Practical Test:
+--------------------------
+1. Lambda expression basic syntax or structure
+Answer: ()->{}
+Q1. left hand side of the arrow operator we have paranthesis, is that is mandatory or not? which case it is mandatory and which case it is not mandatory?
+Q2. right hand side of the arrow operator we have curly bracket, is that is mandatory or not? which case it is mandatory and which case it is not mandatory?
+
+2. Functional Interface:
+Q1. what is the below code means?
+interface Arithmetic {
+	int operation(int a, int b);
+}
+Answer: Functional interface
+
+Q2. Implement the above functional interface using lambda expression with reference as Arithmetic
+Answer: Arithmetic addition = (int a, int b) -> (a + b);
+
+Q3. Invoke it by passing 10,20
+Answer: addition.operation(10,20);
+
+3. Stream API:
+Q1. Integer[] nums = {1,2,3,4,5,6};
+Square all the 6 numbers and then get greater than 20 and count how many are there and sysout it. Using single Stream API statement in one line.
+Answer: long count = Arrays.stream(nums).map(n -> n*n).filter(n -> n > 20).count();
+System.out.println("count "+count);
+
+4. Optional Class:
+Q1.  String[] str = new String[10];  
+consider str[5] and check whether it is not null then convert that string into lowercase and sysout it, if it is null then give appropriate message, everything using Optional class methods only
+Answer: Optional<String> checkNull = Optional.ofNullable(str[5]);  
+        if(checkNull.isPresent()){ 
+            String lowercaseString = str[5].toLowerCase();  
+            System.out.print(lowercaseString);  
+        }else{
+            System.out.println("string value is not present");  
+    	  } 
+
+5. StringJoiner:
+Q1. create one StringJoiner and the output
+
+ 
+Design pattern: Singleton, Factory, Builder, Strategy, Adaptor, Abstract, Command, Facade, Decorator, Iterator, Observer
+
+
+Java-7 features with example:
+-----------------------------
+
+what is the output of the below one?
+public class SimpleClass {
+	public void method(String str){
+		System.out.println("String method " + str);
+	}
+	public void method(Object object) {
+		System.out.println("Object method " + object);
+	}
+	public static void main(String[] args) {
+		SimpleClass instance = new SimpleClass();
+		instance.method("Hello");
+		instance.method(new String("World"));
+		String str = new String("Mango");
+		instance.method((Object)str);
+		instance.method(null);
+	}
+}
+output:
+Object method Hello
+String method World 
+Object method Mango 
+Object method null
+
+
+Write a program in Core JAVA that takes in a number N as input and does the following:
+
+if N is a divisible by 3, print Fizz
+if N is a divisible by 5, print Buzz
+if N is a divisible by both 3 and 5, print FizzBuzz
+
+import java.lang.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int A = sc.nextInt();
+        if(A%3 == 0 && A%5 == 0){
+            System.out.print("FizzBuzz");
+        }else if(A%3 == 0){
+            System.out.print("Fizz");
+        }else if(A%5 == 0){
+            System.out.print("Buzz");
+        }
+    }
+}
+
+Ask them the below codings using core java not using java8 features:
+1. Prime or not for a given number
+2. odd or even for a given number
+3. Palindrome or not for both string and numbers
+4. Fibonacci series using recursion
+5. Factorial of a number using recursion
+6. find all the odd and  even numbers from given numbers
+7. find how many times the given numbers are repeating
+8. Min and Max of given numbers
+
+---------------------------------------------------
+
+what will be the output? // 1 minute only
+System.out.println("Hello"+3+4);
+System.out.println("Hello"+(3+4));
+System.out.println(10+20+"Hello"+30+40);
+System.out.println(10+20+"Hello"+30-40);
+System.out.println(10+"Hello" * "World"+3);
+String str = "Hello";
+System.out.println(str.concat("World")+" "+str);
+
+output:
+Hello34
+Hello7
+30Hello3040
+error: first type:String second type:int
+error: bad operand types with operator *
+HelloWorld Hello
+
+---------------------------------------------------
+
+What is the output of the below code?
+ArrayList al = new ArrayList();
+System.out.println(al); // output is []
+
+What is the output of the below code?
+ArrayList al = new ArrayList();
+System.out.println(al);
+al.get(0); //java.lang.IndexOutOfBoundException will occur
+System.out.println(al);
+
+What is the output of the below code?
+al.add(10); al.add(20);
+System.out.println(al);// output [10, 20]
+
+What is the output of the below code?
+al.add(10); al.add(20);
+System.out.println(al.toString());// output [10, 20]
+
+---------------------------------------------------
+
+Find minimum of 2 numbers:
+min,a,b;if a<b return min=a; else min=b; using if else first then using ternary operator so that in one line we can write.
+similarly min for a,b,c in minimum code of if else and ternary operator.
+-----------------------------------------------------
+
+Core Java:
+----------
+2.	     what is this keyword in java?
+3.	     what is super keyword in java?
+4.	     Explain public static void main(String[] args)?
+4aa.		how to compile a java file in command prompt?
+4ab.		how to run a java file in command prompt?
+4ac.		how to pass arguments to main() in command prompt?
+4a.	     Difference between method and constructor in java?
+5.	     what is overloading in java give example?
+6.	     what is overriding in java give example?
+7.	     difference between static and dynamic binding in java?
+8.	     why static binding is called early binding and dynamic binding is called late binding?
+9.	     what are different access specifiers we have in java?
+10.	     Explain OOPS concept in java?
+10a.		give example for encapsulation in java?
+10a.		give example for abstraction in java?
+10a.		give example for polymorphism in java?
+10a.		how many types of polymorphism are there? compile time, run time, method hidding
+10a.		give example for inheritance in java?
+11	     why we need finally block in java?(3)
+11a.		when and how many times finally block will execute in java?
+12           =>What is the significance of hashcode method in java
+13            =>What are the methods of object class in java(3)
+13a.		In order to make HashMap work more efficiently what are all the methods we need to override? hashcode() & equals()
+22           =>What will happen if we try to get key from hash map which is not present in the map
+14            What is the contract between hashcode and equals method in java
+15            =>What is difference between String literals and String object(3)(it get creates in string constant pool using intern())
+we can use intern() to make String object eligible for SCP => String str= new String("hi").intern();
+16            How to declare multiple exceptions in single catch block and what should be the order of those exceptions(3)
+17            =>What is difference between String, String Builder and String Buffer(3)
+18            =>What is difference between abstract class and interface(3)
+19	     =>What are the collection interfaces we have?(3)
+20.		what are the collection classes we have?
+20           =>Which collection should be used for fast retrieval of elements in non multi threaded environment
+20a.		what is synchronization?
+20b.		what is thread in java? what are the different ways we can create it?
+20c.		Explain thread life cycle?
+20d.		what is serialization?
+21           =>How to make any data member of a class not eligible for serialization?
+37.		what are the methods to be overridden to make the hashmap work more efficiently?
+23           What are fail fast and fail safe collections(6)
+23.		what is ConcurrentModificationException and how to avoid it?
+25           =>Comparable and Comparator(3,6)
+Comparable->compareTo() and Comparator->compare()
+26           =>what is Immutable Class?(3)
+27.          =>Why String is immutable? (3)
+28           Stack and Heap Memory(3)
+29.	     =>what is final, finally and finalize in java?(3)
+30.	     what is the internal working of hashmap?(3)
+30a.		how to remove duplicates from the list easily?
+36.		explain ternary operator in java with example?
+31.		difference between XML and JSON
+32.		how you will read and write XML in java?
+33.		how you will read and write JSON in java?
+34.		how you will update or delete XML data in java?
+35.		how you will update or delete JSON data in java?
+36.		what are the libraries we use to parse XML? (JAXB,JAXM,JAXR,SAXB)
+37.		what are the libraries we use to parse JSON? (Jackson Mapper)
+
+
+Springboot question:
+--------------------
+1. =>What Is Spring Boot and What Are Its Main Features?
+AutoConfiguration, Starters POMs, Spring Boot CLI, Actuator, Spring Boot Initializr, reduces boiler plate code, 
+Embedded server support, In-memory database(h2), Opinionated ‘starter' dependencies, convention over configuration, production-ready application
+2. =>What are the Differences Between Spring and Spring Boot?
+4. =>What is Spring Initializr?
+3. =>How Can We Set Up a Spring Boot Application from scratch manually?
+3a. how to connect springboot with database using JDBC?
+5. =>What Spring Boot Starters are available? 
+spring-boot-starter-web, web-services, parent, test, jdbc, hateoas,jpa, lombak, security, data-jpa, dev-tool,cache, data-rest, spring-boot-starter-actuator, spring-boot-starter-security, validation
+6. =>what is @SpringBootApplication annotation means?
+@EnableAutoConfiguration, @ComponentScan and @Configuration
+6a. what does @SpringBootApplication annotation indicates?
+6b. diff bet @ComponentScan and @Component?
+6c. diff bet @component  and @Bean?
+6c. diff bet @configuration  and @Component?
+6c. diff bet @configuration  and @Bean?
+7. =>Difference between @Controller and @RestController?
+@Controller response as ModelAndView and explicitly mention @ResponseBody, @RestController response will be JSON, 
+no need to specify @Controller and @ResponseBody
+8. =>Difference between @GetMapping and @RequestMapping?
+9. =>How to Disable a Specific Auto-Configuration? using exclude
+10. How to Register a Custom Auto-Configuration?
+10. how to handle exception in Spring boot application? @ControllerAdvice, @ExceptionalHandler
+10a. diff bet @ControllerAdvice and @ExceptionalHandler
+11. =>what are the Stereotype annotations available in spring boot? @Component, @Controller, @Service, @Repository
+12. what is the repository you used in your Springboot project?
+12a. what is the diff bet CRUDRepository and JPARepository?
+13. How to Tell an Auto-Configuration to Back Away When a Bean Exists?
+14. How to Deploy Spring Boot Web Applications as Jar and War Files?
+15. How to Use Spring Boot for Command-Line Applications?
+16. What Are Possible Sources of External Configuration? spring cloud configuration, Redis configuration
+17. What Does It Mean That Spring Boot Supports Relaxed Binding?
+18. What Is Spring Boot DevTools Used For?(live reloading, it will automatically pick the changes we have done else we have to restart the server to make the changes)
+19. How to Write Integration Tests?
+20. What Is Spring Boot Actuator Used For?
+21. Which Is Better to Configure a Spring Boot Project — Properties or YAML?application.properties is default one taken by SB
+22. What Basic Annotations Does Spring Boot Offer? @value & @configurable?
+22a. What is @value & @Configurable?
+22b. what is the default port in spring boot for tomcat,jetty,undertow?
+23. How to Change the Default Port in Spring Boot? server.port=8080
+24. What are all the Embedded Servers Does Spring Boot Support, which is default server and How to Change the Default one?
+Tomcat, Jetty, Undertow
+25. Why Do We Need Spring Profiles?
+26. can you explain the complete workflow of request and response in Spring Boot?
+27. what are the annotations needed from RestController to Repository?
+
+
+REST API Basic Interview Questions:
+-----------------------------------
+1. What do you understand by RESTful Web Services?
+2. What are HTTP Status codes available?
+3. What are the HTTP Methods available?
+4. what are the components of http request and http response?
+5. Difference between SOAP and REST web services?
+6. What is the concept of statelessness in REST?
+Web services can treat each method request independently.
+Web services will not maintain the client's previous interactions. It simplifies the application design.
+As HTTP is itself a statelessness protocol, RESTful Web Services work seamlessly with the HTTP protocols.
+
+10. what are the differences between PUT and PATCH in REST?
+7. What are the differences between PUT and POST in REST?
+8. what are the differences between GET and POST in REST?
+9. what are the differences between DELETE and POST in REST?
+11. what are the differences between TRACE and CONNECT in REST?
+12. what are the differences between GET and PUT in REST?
+12. what are the differences between HEAD and OPTIONS in REST?
+13. what are idempotent methods in REST? GET, PUT, DELETE
+13a. which is safe method in REST? GET
+14. What is Payload in terms of RESTful web services?
+15. What is the maximum payload size that can be sent in POST methods?
+16. Is it possible to send payload in the GET and DELETE methods?
+17. What is the difference between idempotent and safe HTTP methods?
+18. How can you test RESTful Web Services?
+19. Can you tell the disadvantages of RESTful web services?
+Web services need to get extra information in each request and then interpret to get the client's state in case the client interactions are to be taken care of.
+20. What is a REST Resource?
+21. What is URI?
+22. What are the features of RESTful Web Services? to make CRUD operation safer between application n DB and also exposing and consuming JSON / XML data
+23. What do you understand by JAX-RS
+24. Define Messaging in terms of RESTful web services.
+25. While creating URI for web services, what are the best practices that needs to be followed?
+26. What are the best practices to develop RESTful web services?
+27. What are Idempotent methods? How is it relevant in RESTful web services domain?
+28. What are the differences between REST and AJAX?
+29. Define Addressing in terms of RESTful Web Services.
+30. What makes REST services to be easily scalable?
+31. Based on what factors, you can decide which type of web services you need to use - SOAP or REST?
+32. We can develop webservices using web sockets as well as REST. What are the differences between these two?
+33. Can we implement transport layer security (TLS) in REST?
+34. Should we make the resources thread safe explicitly if they are made to share across multiple clients?
+35. How does HTTP Basic Authentication work?
+
+
+Microservices questions:
+------------------------
+1.	What is Microservices? independent services running in diff instances, high availability
+2.	Diff bet Microservices and monolithic application?
+3.	Why we need to go for microservices and what is the advantages and disadvatages of microservices?resilience, load balancer
+1.	What is the need for Cloud? auto scalable
+2.	What is Spring Cloud? config server
+3.	What are the advantages and disadvantages of using cloud?
+4.	What design patterns are used in Microservices? (circuit breaker, chain to chain responsible, APIGateway, orchestration, config service,aggregation, decomposition)
+5.	What is circuit breaker in Microservices?
+6.	What is broker less architecture in MicroService?
+7.	What is Netflix Feign?
+8.	What are Netflix feign advantages? (to communicate between microservices, also load balancing)
+9.	What is Eureka in Spring Cloud?(Service registry and service discovery)
+10.	What is Hystrix in Microservices? (it is a circuit breaker implementation)
+11.	What is ZUUL?
+event driven dp?domain driven dp?circuit breaker, aggregator, APIGateway, Feign Client, Decomposition
+12. what is APIGateway and what are its advantages?
+13. how to authenticate and authorize in microservices applications?
+14. how to secure microservice?
+	1. Password Complexity
+	2. Authentication Mechanism
+	3. Authentication Between Two Services
+	4. Securing Rest Data
+	5. Penetration Testing
+15. Netflix OSS stack (Eureka, Zuul, Ribbon, Hystrix).
+16. how microservice to microservice communication will happen? Feign client, RestTemplate, Web client(Spring5 feature->reactive programming)
+

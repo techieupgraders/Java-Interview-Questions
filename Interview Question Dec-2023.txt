@@ -1,0 +1,252 @@
+- jwt token
+api gateway 
+
+- Exception Propagation
+- Producer Consumer APIs
+- Junit
+- Java 8 threading concepts
+- Spring Batch questions how to process CSV and other files
+- JPA questions
+- SQL questions
+- How to use multiple DBs in a single app
+
+- Basic idea of docker
+Question on Docker
+1. what is Docker container ?
+2. what are docker images ?
+3. what is docker file ?
+4. docker commands
+5. docker components
+
+- what is meant application context, where we need to use it
+- In which scenario polymorphism
+- what is batch process. how it can be general. related in spring boot like altogether, schedular class
+- what scenario we want to go for bean
+- docker commands you used
+- If PR is raised, how you will review the code.
+- End to end flow for spring boot. how the req comes to controller, service layer etc
+- For code quality increase, like Junit test cases, what annotation is used.
+- what are ways to maintain code quality.
+- how you work on merge conflicts, repositories, versions issues, etc
+- what docker container.
+- which scenaio you will go for containrization, how will you pull docker image, how to produce docker image.
+- in which scenaio in JPA used
+- why we need to use spring JPA and Spring Data JPA.
+- Java 8 , hashmap
+
+1.List<String> al = Arrays.asList("ab","ac","ad","guru","ab","ac","ad","guru","guru","ab","ac","ad","guru","guru");
+
+ 
+
+output : [[ab,ac,ad,guru],[ab,ac,ad,guru],[guru],[ab,ac,ad,guru],[guru]]  using java 8
+
+2.Write SQL query to find the 3rd highest salary from a table without using the TOP/limit keyword.
+
+ 
+
+3. what is polymorphism 
+4. what is difference between abstact class and interface
+5. real time senerio to use abstact class and interface
+6. java 8 features
+7. web security 
+8. worked on docker?
+9. worked on spring security 
+10. worked on data jpa or hibernet 
+11. differnce between sql and My sql 
+12. worked on kafka or jms?
+13. difference between rest client and web client
+
+1. Basics of java
+2. What enhancement has come with respect to lambda expression  in java 11 as compared to java 8
+3. What is serialisation?
+4. What are all the design patterns that you have worked upon?
+5. What are the advantages of springboot?
+6. what is front controller?
+7.what is serialization?
+8. What is deepcloning?
+9. Using java 8 find highest salary of employee.
+10. Write a sql query for finding all the transactions that has happened from 1st September to 7th September with respect to timestamp.
+11. Any experience on payment gateways.
+12. Experience on pub-sub.
+13. How to make sure that concurrently if one request has come to fetch the current amount and simultaneously another request has come to update the credit. How do you deal with this situation?
+14. What is docker?
+15what is containerisation.
+16. What is inner join?
+17. What is spring jwt?
+18. How to deal if authorization headers comes null?
+19. Hands on multithreading.
+20. Which design pattern springboot internally uses?
+21.Hands on angular?
+22.What is difference between persist and save?
+23. What is oneonone mapping?
+24. What are the basic dependencies we require to build web project.
+25.if you have one transaction id coming from ui, design the whole process that how you will fetch the data with respect to that transaction id.
+26. Have you worked on struts?
+27. What is idempotent request?
+28.if you want to switch from mysql to oracle how will you change it?
+29. How you load the application.properties file at run time?
+30. Microservices interaction and scaling.
+31. How to send json response once request hits your controller?
+
+1. What is Payload in Spring Boot.
+
+2. What is @Value annotations.
+
+3. 503 status code.
+
+4. Internal working of Hash map.
+
+5. How to communicate one microservice to another microservice.
+
+6. Use of Spring Boot Actuator .
+
+7. Difference between @RestController vs @Controller.
+
+8. How to handle exceptions in Spring Boot.
+
+9. In java8, functional interface .
+
+10. What is Optional class .
+
+11. Streams .
+
+12. Docker .
+
+13. Use of @Qualifier annotation.
+
+14. Use of Api Gateway.
+
+15. What are the annotations are used in Spring Boot.
+
+16. Sonar cube .
+
+1. what is application context ?
+2. design a get mapping method ?
+3. have worked on any messaging queue ?
+4. have worked on docker ? what is a command for building an image ?
+5. how to change value of properties present in application.properties at run time?
+6. if on daily basis 5000 request are being hit on a get controller and we have to fetch huge bulk of data . how to implement the get mapping method so that it give response in most efficent way ?
+7.have worked on data jpa?
+8.have worked on batch processing ?
+9.have you raised any pr and worked on unit testing .
+
+diff between shallow copy and deep copy
+diff between consumer and supplier
+diff between ArrayList and lisnkedList
+differ betweem comparable and comparator
+How to convert json into java
+diff between run time and compile time polymorphism
+difference between ArrayList and Hashset
+Internal working of HashSet
+Predicate work on which functional interface
+forEach is intermediate method or not
+Use of CDRS
+what method is used handle the request in spring boot  controller
+
+1. If there are two apis one is uploading data to server and another is uploading file to server, as developer what would be the difference in both, how you gonna tackle it?
+2. Real time example of batch processing that you have done.
+3. Worked on queues,please explain the scenario
+4.Worked on graphql?
+5. If there are two classes in spring one is bean other  is non bean and in that non bean class one main method is there, so while running the application whether bean will initialise first or main will be invoked first.
+6.Docker basics
+7.how you understand the flow of apis? If i give you half an hour.
+
+1. Transaction annotation
+
+2. Difference between filter and interseptor
+
+3. Gen comparator
+
+4. Difference between Spring JPA and Hibernate
+
+5. Path annotation
+
+6. Synchronous and asynchronous
+
+7. How to communicate service  A to service B
+
+8. getDefault() method in java8
+
+9. Patch header
+
+10. How to configure multiple DB's in spring Boot.
+
+11. How to configure in service layer and Dao layer.
+
+12. JWT token how 
+
+13. Spring security
+
+14. Comparing values using java8 and normal ways
+
+15. How to make singleton as prototype
+
+2.  IOC and DI
+
+3. Lazy and eager implementation
+
+4. Comparable and comparator
+
+5. Design pattern
+
+6. Synchronized and concurrent hashmaps
+
+7.@Hashcodeandequals scenarios 
+
+8. Volatile and transient
+
+9. Patch 
+
+10. JWT token
+
+11. PUT
+
+what is autoconfiguration? How it works with exmple?
+How to create composite key using JPA?
+what is actuator? how to configure customized actuator?
+Java Program to check if two inputs has the same letters(input1 = "abc", input2 ="cba")
+Difference between Treeset and Hashset? How sorting is done?
+How to create a thread pool? Usage?
+How to increase the speed of a java service in production env?
+How Load balancing works?
+what is Completable API?
+Questions on Tread and Executors?
+
+1) What are use cases of TreeSet
+2) How to sort exployees as per their salaries using TreeSet.
+3) What is actuator?
+4) How to make a composite key using Data JPA?
+5) What are advantages of Dockerization?
+6) What is the use of @AutoConfiguration annotation
+7) What are singleton classes?
+
+Java 
+    1. suppose we have an employee class and u want to find out the employee from each department with highest salary
+
+ 
+
+    2. Identify the elements with start with 1 in the array {1,12,3,15,6}
+
+ 
+
+ 
+
+SQL 
+    1. u have an employee table with id, name, and salary and you need to find the second highest salaried emaployee using sql query
+
+
+ 
+
+    2. Diff between DELETE and TRUNCATE
+        - which is more efficient
+    3. Triggers
+    4 stored procedure debugging
+
+ 
+
+SprintBoot
+
+ 
+
+    1. Name some of the annotations used in Spring Boot
+    2. Write customized exception in spring 
