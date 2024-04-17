@@ -1,0 +1,75 @@
+INTERVIEW Questions 
+==============================
+
+Java 8 Program Question :
+===============================
+1. WAy to find third largest element from a given list of numbers.
+Input - 97 83 85 70 78 82
+
+int[] numbers = {97, 83, 85, 70, 78, 82}
+
+2. String[] str = new String[10];  
+consider str[5] and check whether it is not null then convert that string into lowercase and sysout it, if it is null then give appropriate message, everything using Optional class
+Answer: Optional<String> checkNull = Optional.ofNullable(str[5]);  
+        if(checkNull.isPresent()){  // check for value is present or not  
+            String lowercaseString = str[5].toLowerCase();  
+            System.out.print(lowercaseString);  
+        }else{
+            System.out.println("string value is not present");  
+    	  } 
+ 
+
+3. write a program to multiply 2 numbers using functional Interface 
+
+4. Count the no of occurance of words in a given string using Java 8 
+
+String input = "Welcome to the world of java programming language and enjoy reading java programing language"
+
+5. Find the duplicate elements in the given Integer List 
+
+Input : [11, 15, 28, 76, 79, 28, 80, 79, 76, 15]
+
+6. Write a program to reverse the given decimal list 
+
+Arrays.asList(12.45, 23.58, 17.13, 42.89, 33.78, 71.85, 56.98, 21.12);
+
+Core Java IQA'S
+===============================
+Difference between method and constructor in java?
+why static binding is called early binding and dynamic binding is called late binding?
+Comparable and Comparator?
+Why String is immutable?
+What are fail fast and fail safe iTERATORS
+
+Java 8 
+===============================
+What are the newly added features in Java 8?
+What are the sources of data objects a Stream can process? 
+What are Intermediate and Terminal operations?
+What is the most common type of Terminal operations?
+What is the difference between findFirst() and findAny()?
+
+
+Spring/ Spring Boot 
+=============================
+Why Do We Need Spring Profiles?
+Which Is Better to Configure a Spring Boot Project — Properties or YAML?application.properties is default one taken by SB
+how to handle exception in Spring boot application? @ControllerAdvice, @ExceptionalHandling
+what are the Stereotype annotations available? @Component, @Service, @Repository, @Controller?
+
+What are circular dependencies and how can it be resolved and what is the exception does it cause ?
+when do we use setter and constructor dependency injections ?
+what are the spring IOC containers available? and out of these containers which are considered as Eager Loading and Lazy loading ?
+Can the ApplicationContext Spring IOC Container can be made as Lazy loaded ? and how the same can be achieved?
+
+
+REST API 
+===========================
+what are the components of http request and http response?
+What are Idempotent methods?
+While creating URI for web services, what are the best practices that needs to be followed?
+What are the best practices to develop RESTful web services?
+
+Microservices questions:
+What are the advantages of using cloud?
+What design patterns are used in Microservices? (circuit breaker, chain to chain responsible, APIGateway)
